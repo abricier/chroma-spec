@@ -1,0 +1,10 @@
+dist/
+docs/_build/
+htmlcov/
+.nox/
+.pytest_cache/
+.venv/
+.vscode/
+*__pycache__/
+.coverage
+*.svg

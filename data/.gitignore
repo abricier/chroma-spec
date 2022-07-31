@@ -1,0 +1,4 @@
+# Track  this directory & Keep it empty
+*
+!.gitignore
+!*.json

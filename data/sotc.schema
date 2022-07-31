@@ -1,0 +1,87 @@
+{"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "#",
+	"required":false,
+	"properties":{
+		"version": {
+			"type":"string",
+			"id": "Version",
+			"required":true
+		},
+		"flashlights": {
+			"type":"array",
+			"id": "Flashlights",
+			"required":true,
+			"items": {
+				"type":"object",
+				"id": "0",
+				"required":true,
+				"properties":{
+					"id": {
+						"type":"string",
+						"id": "ID",
+						"required":true
+					},
+                    "model": {
+						"type":"string",
+						"id": "Model",
+						"required":true
+					},
+					"status": {
+						"type":"string",
+						"id": "Status",
+						"enum": ["owned", "gifted", "sold", "lent", "broken", "customer service"],
+						"required":true
+					},
+					"configuration": {
+						"type":"string",
+						"id": "Configuration",
+						"enum": ["stock", "modded"],
+						"required":true
+					},
+                    "measures": {
+						"type":"array",
+						"id": "valueTrend",
+						"required":true,
+						"items": {
+							"type":"object",
+							"id": "0",
+							"required":true,
+							"properties":{
+								"date": {
+									"type":"string",
+									"id": "date",
+									"required":true
+								},
+                                "mod": {
+									"type":"string",
+									"id": "Mod",
+                                    "required":true
+								},
+                                "level": {
+									"type":"string",
+									"id": "Level",
+                                    "required":true
+								},
+								"ciex": {
+									"type":"number",
+									"id": "CIEx",
+                                    "minimum": 0,
+                                    "maximum": 1,
+									"required":true
+								},
+                                "ciey": {
+									"type":"number",
+									"id": "CIEy",
+									"minimum": 0,
+                                    "maximum": 1,
+									"required":true
+								}
+                            }
+                        }
+                    }
+				}
+			}
+		}
+	}
+}

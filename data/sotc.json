@@ -1,0 +1,112 @@
+{
+  "version": "0.0.1",
+  "flashlights": [
+    {
+      "id": "001",
+      "model": "SP10Pro",
+      "status": "owned",
+      "configuration": "stock",
+      "measures": [
+        {
+          "date": "2022-07-21",
+          "mod": "og",
+          "level": "1-150",
+          "ciex": 0.3603,
+          "ciey": 0.3715
+        },
+        {
+          "date": "2022-07-21",
+          "mod": "og",
+          "level": "lvl5",
+          "ciex": 0.3553,
+          "ciey": 0.3661
+        },
+        {
+          "date": "2022-07-21",
+          "mod": "og",
+          "level": "lvl7",
+          "ciex": 0.3537,
+          "ciey": 0.3637
+        }
+      ]
+    },
+    {
+      "id": "002",
+      "model": "TS10",
+      "status": "owned",
+      "configuration": "stock",
+      "measures": [
+        {
+          "date": "2022-07-21",
+          "mod": "og",
+          "level": "1-150",
+          "ciex": 0.3418,
+          "ciey": 0.3518
+        }
+      ]
+    },
+    {
+      "id": "003",
+      "model": "PL47MU",
+      "status": "owned",
+      "configuration": "stock",
+      "measures": [
+        {
+          "date": "2022-07-21",
+          "mod": "og",
+          "level": "",
+          "ciex": 0.3604,
+          "ciey": 0.3339
+        }
+      ]
+    },
+    {
+      "id": "004",
+      "model": "E14_III",
+      "status": "owned",
+      "configuration": "modded",
+      "measures": [
+        {
+          "date": "2022-07-24",
+          "idx": "01",
+          "mod": "og",
+          "level": "med",
+          "ciex": 0.381,
+          "ciey": 0.3915
+        },
+        {
+          "date": "2022-07-24",
+          "idx": "02",
+          "mod": "lee",
+          "level": "med",
+          "ciex": 0.3857,
+          "ciey": 0.3853
+        },
+        {
+          "date": "2022-07-24",
+          "idx": "03",
+          "mod": "519a_sm575",
+          "level": "med",
+          "ciex": 0.3464,
+          "ciey": 0.3479
+        }
+      ]
+    },
+    {
+      "id": "005",
+      "model": "GT_Mini",
+      "status": "owned",
+      "configuration": "stock",
+      "measures": [
+        {
+          "date": "2022-07-25",
+          "idx": "01",
+          "mod": "og",
+          "level": "low",
+          "ciex": 0.3505,
+          "ciey": 0.3671
+        }
+      ]
+    }
+  ]
+}
