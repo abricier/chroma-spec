@@ -7,4 +7,3 @@ htmlcov/
 .vscode/
 *__pycache__/
 .coverage
-*.svg
