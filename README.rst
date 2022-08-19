@@ -35,8 +35,11 @@ A sample entry in the database:
                 "measures": [
                     {
                         "date": "2022-07-21",
+                        "idx": "01",
                         "mod": "og",
                         "level": "1-150",
+                        "lux": 74,
+                        "ra": 100,
                         "ciex": 0.3418,
                         "ciey": 0.3518
                     }

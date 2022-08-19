@@ -1,87 +1,118 @@
-{"type":"object",
-	"$schema": "http://json-schema.org/draft-03/schema",
-	"id": "#",
-	"required":false,
-	"properties":{
-		"version": {
-			"type":"string",
-			"id": "Version",
-			"required":true
-		},
-		"flashlights": {
-			"type":"array",
-			"id": "Flashlights",
-			"required":true,
-			"items": {
-				"type":"object",
-				"id": "0",
-				"required":true,
-				"properties":{
-					"id": {
-						"type":"string",
-						"id": "ID",
-						"required":true
-					},
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-03/schema",
+    "id": "#",
+    "required": false,
+    "properties": {
+        "version": {
+            "type": "string",
+            "id": "Version",
+            "required": true
+        },
+        "flashlights": {
+            "type": "array",
+            "id": "Flashlights",
+            "required": true,
+            "items": {
+                "type": "object",
+                "id": "0",
+                "required": true,
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "id": "ID",
+                        "required": true
+                    },
                     "model": {
-						"type":"string",
-						"id": "Model",
-						"required":true
-					},
-					"status": {
-						"type":"string",
-						"id": "Status",
-						"enum": ["owned", "gifted", "sold", "lent", "broken", "customer service"],
-						"required":true
-					},
-					"configuration": {
-						"type":"string",
-						"id": "Configuration",
-						"enum": ["stock", "modded"],
-						"required":true
-					},
+                        "type": "string",
+                        "id": "Model",
+                        "required": true
+                    },
+                    "status": {
+                        "type": "string",
+                        "id": "Status",
+                        "enum": [
+                            "owned",
+                            "gifted",
+                            "sold",
+                            "lent",
+                            "broken",
+                            "customer service"
+                        ],
+                        "required": true
+                    },
+                    "configuration": {
+                        "type": "string",
+                        "id": "Configuration",
+                        "enum": [
+                            "stock",
+                            "modded"
+                        ],
+                        "required": true
+                    },
                     "measures": {
-						"type":"array",
-						"id": "valueTrend",
-						"required":true,
-						"items": {
-							"type":"object",
-							"id": "0",
-							"required":true,
-							"properties":{
-								"date": {
-									"type":"string",
-									"id": "date",
-									"required":true
-								},
+                        "type": "array",
+                        "id": "valueTrend",
+                        "required": true,
+                        "items": {
+                            "type": "object",
+                            "id": "0",
+                            "required": true,
+                            "properties": {
+                                "date": {
+                                    "type": "string",
+                                    "id": "date",
+                                    "required": true
+                                },
                                 "mod": {
-									"type":"string",
-									"id": "Mod",
-                                    "required":true
-								},
+                                    "type": "string",
+                                    "id": "Mod",
+                                    "required": true
+                                },
                                 "level": {
-									"type":"string",
-									"id": "Level",
-                                    "required":true
-								},
-								"ciex": {
-									"type":"number",
-									"id": "CIEx",
+                                    "type": "string",
+                                    "id": "Level",
+                                    "required": true
+                                },
+                                "lux": {
+                                    "type": "number",
+                                    "id": "Lux",
+                                    "minimum": 0,
+                                    "required": true
+                                },
+                                "cct": {
+                                    "type": "number",
+                                    "id": "CCT",
+                                    "minimum": 0,
+                                    "maximum": 10000,
+                                    "required": false
+                                },
+                                "ra": {
+                                    "type": "number",
+                                    "id": "Ra",
+                                    "minimum": 0,
+                                    "maximum": 100,
+                                    "required": true
+                                },
+                                "u": {
+                                    "type": "number",
+                                    "id": "u",
                                     "minimum": 0,
                                     "maximum": 1,
-									"required":true
-								},
-                                "ciey": {
-									"type":"number",
-									"id": "CIEy",
-									"minimum": 0,
+                                    "required": false
+                                },
+                                "v": {
+                                    "type": "number",
+                                    "id": "v",
+                                    "minimum": 0,
                                     "maximum": 1,
-									"required":true
-								}
+                                    "required": false
+                                }
                             }
                         }
                     }
-				}
-			}
-		}
-	}
+                }
+            }
+        }
+    }
 }
