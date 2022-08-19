@@ -5,7 +5,7 @@ import jsonschema
 import pytest
 from click.testing import CliRunner
 
-from chroma_spec import __main__
+from chroma_spec import __main__, flashlight
 
 
 @pytest.fixture
@@ -28,6 +28,8 @@ def test_single(runner: CliRunner, tmp_path) -> None:
             "PL47MU_sw45kd220",
             "--outdir",
             tmp_path,
+            "--zoom",
+            "--verbose",
         ],
     )
     assert result.exit_code == 0
@@ -106,9 +108,9 @@ def test_db_schema_2fail():
                         "level": "1-150",
                         "ciex": 0.3418,
                         "ciey": 0.3518,
-                    }
+                    },
                 ],
-            }
+            },
         ],
     }
 
@@ -119,3 +121,33 @@ def test_db_schema_2fail():
         jsonschema.validate(instance=db, schema=schema)
 
     assert exc.type == jsonschema.exceptions.ValidationError
+
+
+def test_flashlight():
+    """Testing Flashlight class."""
+    properties = {
+        "id": "002",
+        "model": "TS10",
+        "status": "stolen",
+        "configuration": "stock",
+        "measures": [
+            {
+                "date": "2022-07-21",
+                "mod": "og",
+                "level": "1-150",
+                "ciex": 0.3418,
+                "ciey": 0.3518,
+            },
+        ],
+    }
+
+    fl = flashlight.Flashlight(properties)
+    fl.get_plot(0)
+
+    assert fl.model == "TS10"
+    assert fl.status == "stolen"
+    assert fl.configuration == "stock"
+    duv = fl.get_duv(0)
+    assert duv == 0.0014487684494922798
+    cct = fl.get_cct(0)
+    assert cct == 5124.413540561434
