@@ -1,5 +1,7 @@
 """chroma-spec utils."""
+import logging
 import math
+import sys
 
 
 def xy_to_CCT(x, y):
@@ -18,9 +20,8 @@ def xy_to_CCT(x, y):
         4330.655950072925
     """
     n = (x - 0.3320) / (0.1858 - y)
-    cct = 437 * math.pow(n, 3) + 3601 * math.pow(n, 2) + 6861 * n + 5517
 
-    return cct
+    return 437 * math.pow(n, 3) + 3601 * math.pow(n, 2) + 6861 * n + 5517
 
 
 def xy_to_uv(x, y):
@@ -78,6 +79,35 @@ def xy_to_DUV(x, y):
         + k1 * a
         + k0
     )
-    duv = lfp - lbb
 
-    return duv
+    return lfp - lbb
+
+
+def setup_logger(verbose=False):
+    """Setup logger.
+
+    Args:
+        verbose (bool, optional): Flag to enable/disable verbose. Defaults to False.
+
+    Example:
+        >>> from chroma_spec import utils
+        >>> utils.setup_logger()
+        >>> import logging
+        >>> logging.info("Logger using custom format.")
+    """
+    logging_format = (
+        "%(asctime)s - %(filename)s:%(lineno)s - %(levelname)s - %(message)s"
+    )
+
+    if verbose is True:
+        logging.basicConfig(
+            stream=sys.stdout,
+            level=logging.DEBUG,
+            format=logging_format,
+        )
+    else:
+        logging.basicConfig(
+            stream=sys.stdout,
+            level=logging.INFO,
+            format=logging_format,
+        )

@@ -1,14 +1,13 @@
 """Command-line interface."""
 import click
 
-from . import spec
+from . import spec, utils
 
 
 @click.group(name="main")
 @click.version_option()
 def main():
     """chroma-spec main cli."""
-    pass
 
 
 @main.command(name="single")
@@ -16,13 +15,18 @@ def main():
 @click.option("--CIEy", type=float, required=True, help="CIE 1931 y coordinate.")
 @click.option("--model", type=str, required=True, help="Measure description.")
 @click.option(
-    "--outdir", type=click.Path(exists=True), default="data", help="Output directory."
+    "--outdir",
+    type=click.Path(exists=True),
+    default="data",
+    help="Output directory.",
 )
+@click.option("-z", "--zoom", is_flag=True, help="Enables zoom.")
 @click.option("-v", "--verbose", is_flag=True, help="Enables verbose mode.")
 @click.version_option()
-def single(ciex, ciey, model, outdir, verbose):
+def single(ciex, ciey, model, outdir, zoom, verbose):
     """chroma-spec plots a given chromatic measure."""
-    spec.chroma_spec_single(ciex, ciey, model, outdir)
+    utils.setup_logger(verbose)
+    spec.chroma_spec_single(ciex, ciey, model, outdir, zoom=zoom)
 
 
 @main.command(name="batch")
@@ -42,6 +46,7 @@ def single(ciex, ciey, model, outdir, verbose):
 @click.version_option()
 def batch(indb, outdir, verbose):
     """chroma-spec batch plot chromatic measures."""
+    utils.setup_logger(verbose)
     spec.chroma_spec_batch(indb, outdir)
 
 
@@ -62,6 +67,7 @@ def batch(indb, outdir, verbose):
 @click.version_option()
 def evol(indb, outdir, verbose):
     """chroma-spec evol plot chromatic evolutions."""
+    utils.setup_logger(verbose)
     spec.chroma_spec_evol(indb, outdir)
 
 
@@ -82,6 +88,7 @@ def evol(indb, outdir, verbose):
 @click.version_option()
 def gifs(indb, outdir, verbose):
     """chroma-spec gifs plot animated chromatic evolutions."""
+    utils.setup_logger(verbose)
     spec.chroma_spec_gifs(indb, outdir)
 
 
