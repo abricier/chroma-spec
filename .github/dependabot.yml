@@ -1,0 +1,54 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: "monday"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+    assignees:
+      - "abricier"
+    reviewers:
+      - "abricier"
+    open-pull-requests-limit: 5
+  - package-ecosystem: pip
+    directory: "/.github/workflows"
+    schedule:
+      interval: weekly
+      day: "wednesday"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+    assignees:
+      - "abricier"
+    reviewers:
+      - "abricier"
+    open-pull-requests-limit: 5
+  - package-ecosystem: pip
+    directory: "/docs"
+    schedule:
+      interval: weekly
+      day: "friday"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+    assignees:
+      - "abricier"
+    reviewers:
+      - "abricier"
+    open-pull-requests-limit: 5
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: "sunday"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+    assignees:
+      - "abricier"
+    reviewers:
+      - "abricier"
+    open-pull-requests-limit: 5
