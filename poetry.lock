@@ -720,19 +720,22 @@ typing_extensions = "*"
 
 [[package]]
 name = "flake8-rst-docstrings"
-version = "0.2.7"
-description = "Python docstring reStructuredText (RST) validator"
+version = "0.3.0"
+description = "Python docstring reStructuredText (RST) validator for flake8"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "flake8-rst-docstrings-0.2.7.tar.gz", hash = "sha256:2740067ab9237559dd45a3434d8c987792c7b259ca563621a3b95efe201f5382"},
-    {file = "flake8_rst_docstrings-0.2.7-py3-none-any.whl", hash = "sha256:5d56075dce360bcc9c6775bfe7cb431aa395de600ca7e8d40580a28d50b2a803"},
+    {file = "flake8-rst-docstrings-0.3.0.tar.gz", hash = "sha256:d1ce22b4bd37b73cd86b8d980e946ef198cfcc18ed82fedb674ceaa2f8d1afa4"},
+    {file = "flake8_rst_docstrings-0.3.0-py3-none-any.whl", hash = "sha256:f8c3c6892ff402292651c31983a38da082480ad3ba253743de52989bdc84ca1c"},
 ]
 
 [package.dependencies]
-flake8 = ">=3.0.0"
+flake8 = ">=3"
 pygments = "*"
 restructuredtext-lint = "*"
+
+[package.extras]
+develop = ["build", "twine"]
 
 [[package]]
 name = "flake8-simplify"
@@ -3022,4 +3025,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "e7f898fdf6d6dc138e99630bd3d505aa008e76b265c82e659c81ddd804ea9163"
+content-hash = "3f9fb0458dd4a61bcf46a3e25f67b59e8c14a9d107cb2606c00bad2bde41ebb2"
