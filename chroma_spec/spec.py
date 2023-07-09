@@ -203,7 +203,7 @@ def chroma_spec_gifs(indb, outdir):
                 pathlib.Path(fl_path, fl["model"] + ".gif"),
                 frames,
                 format="GIF",
-                fps=1,
+                duration=1000,
                 loop=3,
             )
 
