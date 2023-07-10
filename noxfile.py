@@ -19,11 +19,13 @@ except ImportError:
 
 
 package = "chroma_spec"
+python_versions = ["3.10"]
 nox.options.sessions = "lint", "tests", "coverage"
+nox.needs_version = ">= 2023.4.22"
 locations = "chroma_spec", "tests", "docs", "noxfile.py", "docs/conf.py"
 
 
-@session(python="3.8")
+@session(python=python_versions)
 def black(session):
     """Code formatting with Black."""
     args = session.posargs or locations
@@ -31,7 +33,7 @@ def black(session):
     session.run("black", *args)
 
 
-@session(python="3.8")
+@session(python=python_versions)
 def tests(session):
     """Testing with pytest."""
     session.install(".")
@@ -43,7 +45,7 @@ def tests(session):
             session.notify("coverage", posargs=[])
 
 
-@session(python="3.8")
+@session(python=python_versions)
 def coverage(session) -> None:
     """Produce the coverage report."""
     args = session.posargs or ["report"]
@@ -55,7 +57,7 @@ def coverage(session) -> None:
         session.notify("coverage-html", posargs=[])
 
 
-@session(name="coverage-html", python="3.8")
+@session(name="coverage-html", python=python_versions)
 def coverage_html(session) -> None:
     """Produce the coverage html report."""
     html_dir = Path("htmlcov")
@@ -66,7 +68,7 @@ def coverage_html(session) -> None:
     session.run("coverage", *args)
 
 
-@session(python="3.8")
+@session(python=python_versions)
 def xdoctest(session: Session) -> None:
     """Run examples with xdoctest."""
     if session.posargs:
@@ -81,7 +83,7 @@ def xdoctest(session: Session) -> None:
     session.run("python", "-m", "xdoctest", *args)
 
 
-@session(python="3.8")
+@session(python=python_versions)
 def lint(session):
     """Linting with Flake8."""
     args = session.posargs or locations
@@ -98,7 +100,7 @@ def lint(session):
     session.run("flake8", *args)
 
 
-@session(python="3.8")
+@session(python=python_versions)
 def docs(session: Session) -> None:
     """Build the documentation."""
     build_dir = Path("docs", "_build")
@@ -110,7 +112,7 @@ def docs(session: Session) -> None:
     session.run("sphinx-build", *args)
 
 
-@session(name="docs-serve", python="3.8")
+@session(name="docs-serve", python=python_versions)
 def docs_serve(session: Session) -> None:
     """Build and serve the documentation with live reloading on file changes."""
     build_dir = Path("docs", "_build")
