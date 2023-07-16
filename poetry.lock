@@ -706,13 +706,13 @@ test = ["pytest-cov"]
 
 [[package]]
 name = "flake8-pie"
-version = "0.15.0"
+version = "0.16.0"
 description = "A flake8 extension that implements misc. lints"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "flake8-pie-0.15.0.tar.gz", hash = "sha256:a2d1e67a374d925f688300e9d0e202d1827a0d91e0a11114f712beee639bdc7c"},
-    {file = "flake8_pie-0.15.0-py3-none-any.whl", hash = "sha256:47fd9d232b419f8db7a6465dee95cc24b385b1b8bdfd62b65250d70eaa06fc89"},
+    {file = "flake8-pie-0.16.0.tar.gz", hash = "sha256:b8dcb7b92706fa33d05d92a4b3e49b7a9fd3f0041849166275b646ba50e515ba"},
+    {file = "flake8_pie-0.16.0-py3-none-any.whl", hash = "sha256:24cd7849b0eee22e2328b9e9d2a1dea40013b0a3106864bbadd06a4b05dbb71f"},
 ]
 
 [package.dependencies]
@@ -3026,4 +3026,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "f438a5cdc2263189b39d620c59bef6b369a5a80ac50b367e9d928a4c50655f9b"
+content-hash = "3d702dc59b9155c1e7420064244e6d712ea7ff719f083b8ac9b7179f507d6250"
