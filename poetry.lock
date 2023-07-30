@@ -889,19 +889,19 @@ woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
 
 [[package]]
 name = "furo"
-version = "2022.6.21"
+version = "2023.3.27"
 description = "A clean customisable Sphinx documentation theme."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "furo-2022.6.21-py3-none-any.whl", hash = "sha256:061b68e323345e27fcba024cf33a1e77f3dfd8d9987410be822749a706e2add6"},
-    {file = "furo-2022.6.21.tar.gz", hash = "sha256:9aa983b7488a4601d13113884bfb7254502c8729942e073a0acb87a5512af223"},
+    {file = "furo-2023.3.27-py3-none-any.whl", hash = "sha256:4ab2be254a2d5e52792d0ca793a12c35582dd09897228a6dd47885dabd5c9521"},
+    {file = "furo-2023.3.27.tar.gz", hash = "sha256:b99e7867a5cc833b2b34d7230631dd6558c7a29f93071fdbb5709634bb33c5a5"},
 ]
 
 [package.dependencies]
 beautifulsoup4 = "*"
-pygments = "*"
-sphinx = ">=4.0,<6.0"
+pygments = ">=2.7"
+sphinx = ">=5.0,<7.0"
 sphinx-basic-ng = "*"
 
 [[package]]
@@ -3127,4 +3127,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "98ef1efc51c592fbc1b9ba8a572140995cc88a0c41441ac135ba86c78bf0f332"
+content-hash = "2eb166c3f45827d67b43d58bb7ba1638fef14b9258e7cccbd86b2eee36706af2"
