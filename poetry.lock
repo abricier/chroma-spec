@@ -948,13 +948,13 @@ files = [
 
 [[package]]
 name = "imageio"
-version = "2.33.0"
+version = "2.34.0"
 description = "Library for reading and writing a wide range of image, video, scientific, and volumetric data formats."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "imageio-2.33.0-py3-none-any.whl", hash = "sha256:d580d6576d0ae39c459a444a23f6f61fe72123a3df2264f5fce8c87784a4be2e"},
-    {file = "imageio-2.33.0.tar.gz", hash = "sha256:39999d05eb500089e60be467dd7d618f56e142229b44c3961c2b420eeb538d7e"},
+    {file = "imageio-2.34.0-py3-none-any.whl", hash = "sha256:08082bf47ccb54843d9c73fe9fc8f3a88c72452ab676b58aca74f36167e8ccba"},
+    {file = "imageio-2.34.0.tar.gz", hash = "sha256:ae9732e10acf807a22c389aef193f42215718e16bd06eed0c5bb57e1034a4d53"},
 ]
 
 [package.dependencies]
@@ -3453,4 +3453,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "9907375b184bcdbdd1232014c136e3d9dbc49de754343638343ee49e41f3f2d2"
+content-hash = "6201fe7df793ebc74c22c20e161fad1c7b4a9627e0d00a8923caf0e366653f55"
