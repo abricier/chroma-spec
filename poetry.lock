@@ -773,17 +773,17 @@ dev = ["coverage", "hypothesis", "hypothesmith (>=0.2)", "pre-commit", "pytest",
 
 [[package]]
 name = "flake8-commas"
-version = "2.1.0"
+version = "4.0.0"
 description = "Flake8 lint for trailing commas."
 optional = false
-python-versions = "*"
+python-versions = ">=3.8"
 files = [
-    {file = "flake8-commas-2.1.0.tar.gz", hash = "sha256:940441ab8ee544df564ae3b3f49f20462d75d5c7cac2463e0b27436e2050f263"},
-    {file = "flake8_commas-2.1.0-py2.py3-none-any.whl", hash = "sha256:ebb96c31e01d0ef1d0685a21f3f0e2f8153a0381430e748bf0bbbb5d5b453d54"},
+    {file = "flake8_commas-4.0.0-py3-none-any.whl", hash = "sha256:cad476d71ba72e8b941a8508d5b9ffb6b03e50f7102982474f085ad0d674b685"},
+    {file = "flake8_commas-4.0.0.tar.gz", hash = "sha256:a68834b42a9a31c94ca790efe557a932c0eae21a3479c6b9a23c4dc077e3ea96"},
 ]
 
 [package.dependencies]
-flake8 = ">=2"
+flake8 = ">=5"
 
 [[package]]
 name = "flake8-docstrings"
@@ -3459,4 +3459,4 @@ testing = ["func-timeout", "jaraco.itertools", "pytest (>=6)", "pytest-black (>=
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<3.11"
-content-hash = "dd901d3ca860ef530569c4c3e649216f5708899b001f8f55a6a46e147e0e55d7"
+content-hash = "9d489aa33eab3474484117075eae7b4b89ecfbc8ab2c799398d4422ef01220a0"
