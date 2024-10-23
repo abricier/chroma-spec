@@ -3,4 +3,4 @@ nox-poetry==1.0.3
 pip==24.2
 pipx==1.7.1
 poetry==1.8.2
-virtualenv==20.26.0
+virtualenv==20.27.0
