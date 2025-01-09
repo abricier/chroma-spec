@@ -3,4 +3,5 @@ nox-poetry==1.0.3
 pip==24.3.1
 pipx==1.7.1
 poetry==2.0.0
+poetry-plugin-export==1.8.0
 virtualenv==20.28.0
