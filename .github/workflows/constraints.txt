@@ -4,4 +4,4 @@ pip==26.1.1
 pipx==1.16.3
 poetry==2.4.1
 poetry-plugin-export==1.10.0
-virtualenv==21.3.2
+virtualenv==21.7.0
